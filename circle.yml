@@ -5,3 +5,6 @@ deployment:
    branch: master
    heroku:
     appname: family-dialer
+    test:
+  override:
+    - php ./test-suite/run.php --unit-tests

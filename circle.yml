@@ -1,6 +1,8 @@
  machine:
    php:
-      version: 5.4.5
+      version: 5.2
  deployment:
    pro:
     branch: master
+    heroku:
+        appname: family-dialer

@@ -1,6 +1,5 @@
 machine:
   php:
-    version: 5.5.11
 deployment:
   pro:
    branch: master

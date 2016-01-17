@@ -1,10 +1,8 @@
 machine:
   php:
+   -5.2
 deployment:
   pro:
    branch: master
    heroku:
     appname: family-dialer
-test:
-   override:
-    - php ./test-suite/run.php --unit-tests

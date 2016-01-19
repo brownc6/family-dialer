@@ -1,6 +1,6 @@
 machine:
-  php:
-    version: 5.5.11
+  node:
+    version: 4.1.0
 deployment:
   pro:
     branch: master

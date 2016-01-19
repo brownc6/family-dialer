@@ -1,0 +1,9 @@
+{
+	"scripts": {
+		"test": "echo \"no tests, sorry\"",
+		"start": "node main.js"
+	},
+	"dependencies": {
+		"restify": "^4.0.3"
+	}
+}

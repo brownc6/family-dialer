@@ -3,5 +3,6 @@ machine:
     version: 5.5.11
 deployment:
   pro:
-   branch: master
-   appname: family-dialer
+    branch: master
+    heroku:
+      appname: family-dialer

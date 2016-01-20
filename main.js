@@ -2,7 +2,7 @@ const restify = require('restify');
 
 const server = restify.createServer({
 	name:'family-dialer',
-	version:'1.0.0'
+	version:'1.0.0',
 });
 
 server.use(restify.bodyParser());
@@ -15,8 +15,11 @@ server.post('/', function(req,res,next){
 					'</Gather>'+
 				'</Response>';
 
-	res.header('content-type','text/xml');
-	res.send(200, twiml);
+	res.writeHead(200,{
+		'Content-Type':'text/html'
+	})
+	res.write(twiml);
+	res.end();
 	next();
 })
 
@@ -27,12 +30,15 @@ server.post('/handle-key', function(req,res,next){
 					'<Say>The call failed or the remote party hung up.  Goodbye.</Say>' + 
 				'</Response>';
 
-	res.header('content-type','text/xml');
-	res.send(200, twiml);
+	res.writeHead(200,{
+		'Content-Type':'text/html'
+	})
+	res.write(twiml);
+	res.end();
 	next();
 })
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 server.listen(port, function(){
 	console.log('server listening on port', port);
 })

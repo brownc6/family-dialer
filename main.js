@@ -18,7 +18,7 @@ server.post('/', function(req,res,next){
 	next();
 })
 
-server.post('/handle-key', function(req.res.next){
+server.post('/handle-key', function(req,res,next){
 
 	const twiml = '<Response>'+
 					'<Dial>+'+req.params.Digits+'</Dial>'+

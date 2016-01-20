@@ -29,3 +29,7 @@ server.post('/handle-key', function(req.res.next){
 	next();
 })
 
+const port = process.ENV.PORT;
+server.listen(port, function(){
+	console.log('server listening on port', port);
+})

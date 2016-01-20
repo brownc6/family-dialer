@@ -16,7 +16,7 @@ server.post('/', function(req,res,next){
 				'</Response>';
 
 	res.writeHead(200,{
-		'Content-Type':'text/html'
+		'Content-Type':'text/xml'
 	})
 	res.write(twiml);
 	res.end();
@@ -31,7 +31,7 @@ server.post('/handle-key', function(req,res,next){
 				'</Response>';
 
 	res.writeHead(200,{
-		'Content-Type':'text/html'
+		'Content-Type':'text/xml'
 	})
 	res.write(twiml);
 	res.end();

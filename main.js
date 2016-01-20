@@ -15,7 +15,7 @@ server.post('/', function(req,res,next){
 					'</Gather>'+
 				'</Response>';
 
-	res.setHeader('content-type','text/xml');
+	res.header('content-type','text/xml');
 	res.send(200, twiml);
 	next();
 })
@@ -27,7 +27,7 @@ server.post('/handle-key', function(req,res,next){
 					'<Say>The call failed or the remote party hung up.  Goodbye.</Say>' + 
 				'</Response>';
 
-	res.setHeader('content-type','text/xml');
+	res.header('content-type','text/xml');
 	res.send(200, twiml);
 	next();
 })

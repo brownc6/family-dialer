@@ -7,7 +7,7 @@ const server = restify.createServer({
 
 server.use(restify.bodyParser());
 
-server.get('/', function(req,res,next){
+server.post('/', function(req,res,next){
 	const twiml = '<Response>' +
 					'<Say> Hello, connecting you now </Say>' +
 					'<Gather finishOnKey="#" action="handle-key" method="POST">'+
